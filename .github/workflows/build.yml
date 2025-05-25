@@ -28,7 +28,7 @@ jobs:
       run: pyinstaller --onefile main.py
 
     - name: Upload EXE artifact
-      uses: actions/upload-artifact@fdc59fddfdcf3eaf34280c6a9135c4eeba7c90c5
+      uses: actions/upload-artifact@v3
       with:
         name: windows-exe
         path: dist/main.exe
