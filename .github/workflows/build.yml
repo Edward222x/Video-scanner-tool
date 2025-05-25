@@ -25,11 +25,10 @@ jobs:
         pip install pyinstaller
 
     - name: Build EXE with PyInstaller
-      run: |
-        pyinstaller --onefile main.py
+      run: pyinstaller --onefile main.py
 
-    - name: Upload EXE as artifact
-      uses: actions/upload-artifact@v3.1.2
+    - name: Upload EXE artifact
+      uses: actions/upload-artifact@fdc59fddfdcf3eaf34280c6a9135c4eeba7c90c5
       with:
         name: windows-exe
         path: dist/main.exe
